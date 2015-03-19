@@ -92,9 +92,29 @@ public class PictureTester
   public static void testMirrorVerticalRightToLeft()
   {
 
-    Picture f14s = new Picture("images/two-F14D-in-flight.jpg");
+    Picture f14s = new Picture("images/caterpillar.jpg");
     f14s.explore();
     f14s.mirrorVerticalRightToLeft();
+    f14s.explore();
+
+  }
+
+  public static void testMirrorHorizontal()
+  {
+
+    Picture f14s = new Picture("images/redMotorcycle.jpg");
+    f14s.explore();
+    f14s.mirrorHorizontal();
+    f14s.explore();
+
+  }
+
+  public static void testMirrorHorizontalBotToTop()
+  {
+
+    Picture f14s = new Picture("images/redMotorcycle.jpg");
+    f14s.explore();
+    f14s.mirrorHorizontalBotToTop();
     f14s.explore();
 
   }
@@ -113,8 +133,9 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical();
-    testMirrorVerticalRightToLeft();
+    //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
+    testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
