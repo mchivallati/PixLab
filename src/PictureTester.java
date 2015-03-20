@@ -48,7 +48,8 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture( "images/swan.jpg" );
+    Picture swan = new Picture( "images/austria.jpg" );
+    swan.explore();
     swan.edgeDetection( 10 );
     swan.explore();
   }
@@ -89,6 +90,15 @@ public class PictureTester
 
   }
 
+  public static void testNegativeColor()
+  {
+
+    Picture f14s = new Picture("images/two-F14D-in-flight.jpg");
+    f14s.negativeColor();
+    f14s.explore();
+
+  }
+
   public static void testMirrorVerticalRightToLeft()
   {
 
@@ -118,6 +128,42 @@ public class PictureTester
     f14s.explore();
 
   }
+
+  private static void testFixUnderwater()
+  {
+
+    Picture water = new Picture("images/water.jpg");
+    water.explore();
+    water.fixUnderwater();
+    water.explore();
+
+  }
+
+  public static void testMirrorArms()
+  {
+
+    Picture snowman = new Picture("images/snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+
+  }
+
+  private static void testEdgeDetection2()
+  {
+
+    Picture swan = new Picture( "images/austria.jpg" );
+    swan.edgeDetection2( 10 );
+    swan.explore();
+
+  }
+
+  public static void testEdgeDetection3()
+  {
+    Picture swan = new Picture( "images/austria.jpg" );
+    swan.edgeDetection3( 10 );
+    swan.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -130,20 +176,22 @@ public class PictureTester
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
+    //testNegativeColor();
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorVerticalRightToLeft();
-    testMirrorHorizontalBotToTop();
+    //testMirrorHorizontalBotToTop();
+    //testMirrorHorizontal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    testEdgeDetection();
+    testEdgeDetection3();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
